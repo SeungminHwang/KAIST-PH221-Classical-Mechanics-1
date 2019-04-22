@@ -10,9 +10,9 @@ class damped_driven_pendlum():
 		self.c = 0.05
 		self.F = 0.3
 		self.w = 0.7
-		self.dt = 1e-6
+		self.dt = 1e-4
 
-		self.x = [1.0]
+		self.x = [1.5]
 		self.v = [0.0]
 		self.a = []
 		self.t = [0.0]
@@ -83,10 +83,10 @@ class damped_driven_pendlum():
 					ax[i, j].set_xlim(0, np.pi*20)
 					#ax[i, j].set_ylim(-self.v[int(21*np.pi)],self.v[int(21*np.pi)])
 				elif(mode[j] == "VX_P"):
-					ax[i, j].plot(self.px, self.pv, "o", s = 0.1)
+					ax[i, j].plot(self.px, self.pv, "o")
 					ax[i, j].set_xlim(-np.pi, np.pi)
 
-			
+			'''
 			# Opposite Initial Condition
 			self.__init__()
 			self.F = -0.4 - 0.1*i
@@ -100,7 +100,7 @@ class damped_driven_pendlum():
 				if(mode[j] == "VX"):		
 					ax[i, j].plot(self.x, self.v)
 					ax[i, j].set_xlim(-np.pi, np.pi)
-			
+			'''
 
 		plt.show()
 
