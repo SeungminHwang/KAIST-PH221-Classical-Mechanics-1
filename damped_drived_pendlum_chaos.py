@@ -12,7 +12,7 @@ class damped_driven_pendlum():
 		self.w = 0.7
 		self.dt = 1e-4
 
-		self.x = [1.5]
+		self.x = [1.0]
 		self.v = [0.0]
 		self.a = []
 		self.t = [0.0]
